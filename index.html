@@ -1,0 +1,57 @@
+<html>
+<head>
+  <title>Watch</title>
+  <link rel="stylesheet" href="./style.css"/>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+</head>
+
+<body>
+
+<div>
+  <img src="images/moon.png" id="icon">
+  <table>
+    <tr>
+        <td id="text">
+            <b>SWITCH THEME</b>
+        </td>
+</table>
+</div>
+
+  <svg width="600" height="600" viewBox="-100 -100 200 200">
+    <circle class="minute_marker" cx="0" cy="0" r="90" pathLength="60"/>
+    <circle class="hour_marker" cx="0" cy="0" r="90" pathLength="60"/>
+
+    <g id="hour_hand">
+      <line class="hand" x1="0" x2="0" x2="0" y2="-50"/>
+      <line class="hand hand--thick" x1="0" y1="-40" x2="0" y2="-50"/>
+    </g>
+
+    <g id="minute_hand">
+      <line class="hand" x1="0" x2="0" x2="0" y2="-80"/>
+      <line class="hand hand--thick" x1="0" y1="-50" x2="0" y2="-80"/>
+    </g>
+
+    <g id="second_hand">
+      <line class="hand hand--second" x1="0" y1="35" x2="0" y2="-80"/>   
+    </g>
+
+    <circle class="center" r="2"/>
+
+  </svg>
+
+  <script src="./animate.js"></script>
+
+  <script>
+    var icon = document.getElementById("icon");
+    icon.onclick = function(){
+        document.body.classList.toggle("dark-theme");
+        if(document.body.classList.contains("dark-theme")){
+           icon.src ="images/sun.png";
+            }else{
+               icon.src ="images/moon.png";
+            } 
+        }      
+    </script>
+
+</body>
+</html>

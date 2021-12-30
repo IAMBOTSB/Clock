@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-family: 'Barlow', sans-serif;
+}
+
+body{
+  background-color:  var(--color);
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+    --color: #E0FFFF;
+    --text-color: #27589C;
+    --hour-minute: #21A8D4;
+    --hr-marker: #00FFFF;
+    --min-marker: #2afeb7;
+    --second: #00FFFF;
+    --innercircle: #E0FFFF;
+    --outercircle: #00FFFF;
+}
+
+.dark-theme {
+    --color: #100c07;
+    --text-color: blanchedalmond;
+    --hour-minute: #cc9250;
+    --hr-marker: blanchedalmond;
+    --min-marker: #c2a07e;
+    --second: blanchedalmond;
+    --innercircle: #100c07;
+    --outercircle: blanchedalmond;
+}
+
+
+
+#text{
+    position: absolute;
+    top: 27px;
+    right:  60px;
+    color: var(--text-color);
+}
+
+#icon {
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right:  23px;
+}
+
+
+.hour_marker{
+  fill: transparent;
+  stroke:  var(--hr-marker);
+  stroke-width: 7;
+  stroke-dasharray: 0.2,4.8;
+  stroke-dashoffset: 0.1;
+}
+
+.minute_marker{
+  fill: transparent;
+  stroke: var(--min-marker);
+  stroke-width: 4;
+  stroke-dasharray: 0.2,0.8;
+  stroke-dashoffset: 0.1;
+}
+
+.hand{
+  stroke: var(--hour-minute);
+  stroke-width: 2;
+  stroke-linecap: circle;
+}
+
+.hand--thick{
+  stroke-width: 5;
+}
+
+.hand--second{
+  stroke: var(--second);
+}
+
+.center{
+  fill: var(--innercircle);
+  stroke-width: 2;
+  stroke: var(--outercircle);
+}
+
